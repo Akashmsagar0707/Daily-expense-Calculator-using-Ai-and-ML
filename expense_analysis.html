@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Analysis</title>
+    <script src="https://cdn.plot.ly/plotly-2.18.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px;
+            color: #4CAF50;
+        }
+
+        .chart-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .chart {
+            flex: 1;
+            min-width: 400px;
+            max-width: 600px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Expense Analysis</h1>
+    <div class="chart-container">
+        <div class="chart">
+            <h2>Bar Chart: Spending by Category</h2>
+            {{ bar_chart|safe }}
+        </div>
+        <div class="chart">
+            <h2>Pie Chart: Spending Distribution</h2>
+            {{ pie_chart|safe }}
+        </div>
+    </div>
+</body>
+</html>
